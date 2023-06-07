@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
+import { Link }from 'react-router-dom'
 
 import {HiOutlineSearch} from 'react-icons/hi'
 import {MdMenuOpen} from 'react-icons/md'
@@ -46,7 +46,7 @@ class NavBar extends Component {
     const accountRoute = isAccount ? 'menu-items highlight' : 'menu-items'
 
     return (
-      <nav className="nav-bar">
+      <header className="nav-bar">
         <div className="header">
           <Link to="/" className="img-link">
             <img
@@ -56,12 +56,16 @@ class NavBar extends Component {
             />
           </Link>
           <ul className="show-menu show1">
-            <Link to="/" className={homeRoute}>
-              <li>Home</li>
-            </Link>
-            <Link to="/popular" className={popularRoute}>
-              <li>Popular</li>
-            </Link>
+            <li>
+              <Link to="/" className={homeRoute}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/popular" className={popularRoute}>
+                Popular
+              </Link>
+            </li>
           </ul>
           <div className="icons-container">
             <div className={searchContainer}>
@@ -126,7 +130,7 @@ class NavBar extends Component {
             </ul>
           )}
         </nav>
-      </nav>
+      </header>
     )
   }
 }
