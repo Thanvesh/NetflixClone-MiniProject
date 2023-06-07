@@ -63,10 +63,11 @@ class Popular extends Component {
       <>
         <ul className="popular-items">
           {popularMoviesList.map(eachMovie => (
-            <MovieItems eachMovie={eachMovie} key={eachMovie.id} />
+            <li key={eachMovie.id}>
+              <MovieItems eachMovie={eachMovie} />
+            </li>
           ))}
         </ul>
-        <Footer />
       </>
     )
   }
@@ -96,6 +97,7 @@ class Popular extends Component {
       <div>
         <NavBar isPopular={isPopular} />
         {this.renderSwitchView()}
+        <Footer />
       </div>
     )
   }

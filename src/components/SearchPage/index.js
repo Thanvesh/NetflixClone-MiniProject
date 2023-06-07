@@ -56,7 +56,9 @@ class SearchPage extends Component {
     return searchResultsList.length > 0 ? (
       <ul className="search-items">
         {searchResultsList.map(eachMovie => (
-          <MovieItems eachMovie={eachMovie} key={eachMovie.id} />
+          <li key={eachMovie.id}>
+            <MovieItems eachMovie={eachMovie} />
+          </li>
         ))}
       </ul>
     ) : (

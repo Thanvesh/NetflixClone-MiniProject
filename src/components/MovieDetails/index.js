@@ -2,12 +2,12 @@ import {Component} from 'react'
 import {format} from 'date-fns'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
+import {withRouter} from 'react-router-dom'
 
 import NavBar from '../NavBar'
 import MovieItems from '../MovieItems'
 import Footer from '../Footer'
 import FailurePage from '../FailurePage'
-
 import './index.css'
 
 const AvailableLanguages = props => {
@@ -199,7 +199,9 @@ class MovieDetails extends Component {
             <h1 className="more-like-this-text">More like this</h1>
             <div className="similar-movies-list">
               {similarMovies.map(eachMovie => (
-                <MovieItems eachMovie={eachMovie} key={eachMovie.id} />
+                <li key={eachMovie.id}>
+                  <MovieItems eachMovie={eachMovie} />
+                </li>
               ))}
             </div>
           </div>
@@ -228,4 +230,4 @@ class MovieDetails extends Component {
   }
 }
 
-export default MovieDetails
+export default withRouter(MovieDetails)

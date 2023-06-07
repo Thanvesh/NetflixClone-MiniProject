@@ -139,6 +139,7 @@ class Home extends Component {
   renderPosterSuccessView = () => {
     const {randomMovie} = this.state
     const {title, overview, backdropPath} = randomMovie
+    console.log(overview)
 
     return (
       <div
@@ -164,7 +165,9 @@ class Home extends Component {
         <div className="movies-list-page">
           <Slider className="slick" {...settings}>
             {originalMoviesList.map(eachMovie => (
-              <MovieItems eachMovie={eachMovie} key={eachMovie.id} />
+              <li key={eachMovie.id}>
+                <MovieItems eachMovie={eachMovie} />
+              </li>
             ))}
           </Slider>
         </div>
@@ -180,7 +183,9 @@ class Home extends Component {
         <div className="movies-list-page">
           <Slider className="slick" {...settings}>
             {trendingMoviesList.map(eachMovie => (
-              <MovieItems eachMovie={eachMovie} key={eachMovie.id} />
+              <li key={eachMovie.id}>
+                <MovieItems eachMovie={eachMovie} />
+              </li>
             ))}
           </Slider>
         </div>
