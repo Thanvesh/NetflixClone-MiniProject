@@ -4,7 +4,7 @@ import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 
 import NavBar from '../NavBar'
-import SimilarMovies from '../SimilarMovies'
+import MovieItems from '../MovieItems'
 import Footer from '../Footer'
 import FailurePage from '../FailurePage'
 
@@ -199,7 +199,7 @@ class MovieDetails extends Component {
             <h1 className="more-like-this-text">More like this</h1>
             <div className="similar-movies-list">
               {similarMovies.map(eachMovie => (
-                <SimilarMovies eachMovie={eachMovie} key={eachMovie.id} />
+                <MovieItems eachMovie={eachMovie} key={eachMovie.id} />
               ))}
             </div>
           </div>
