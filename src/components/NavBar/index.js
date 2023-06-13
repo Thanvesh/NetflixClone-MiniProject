@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import {HiOutlineSearch} from 'react-icons/hi'
 import {MdMenuOpen} from 'react-icons/md'
 import {AiFillCloseCircle} from 'react-icons/ai'
-
 import './index.css'
 
 class NavBar extends Component {

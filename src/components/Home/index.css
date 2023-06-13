@@ -1,11 +1,13 @@
 body {
   margin: 0px;
   box-sizing: border-box;
+  background: #131313;
 }
 .home-page {
   background-size: cover;
   min-height: 60vh;
 }
+
 .home-movie-page {
   padding-left: 32px;
   padding-right: 32px;

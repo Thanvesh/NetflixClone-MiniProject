@@ -4,7 +4,6 @@ import Loader from 'react-loader-spinner'
 
 import NavBar from '../NavBar'
 import MovieItems from '../MovieItems'
-import FailurePage from '../FailurePage'
 
 import './index.css'
 
@@ -93,7 +92,23 @@ class SearchPage extends Component {
     this.getSearchMoviesData()
   }
 
-  renderFailureView = () => <FailurePage tryAgain={this.tryAgainSearchData} />
+  renderFailureView = () => (
+    <div className="failure-view">
+      <img
+        className="failure-img"
+        alt="failure view"
+        src="https://res.cloudinary.com/dkbxi5qts/image/upload/v1660153718/movies%20prime%20app/failure_img_vggqi4.svg"
+      />
+      <p className="failure-text">Something went wrong. Please try again</p>
+      <button
+        onClick={this.tryAgainSearchData}
+        className="retry-btn"
+        type="button"
+      >
+        Try Again
+      </button>
+    </div>
+  )
 
   renderSwitchView = () => {
     const {renderStatus} = this.state

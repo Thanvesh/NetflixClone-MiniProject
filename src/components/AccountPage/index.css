@@ -6,7 +6,7 @@
   height: 70vh;
   padding-left: 32px;
   padding-right: 32px;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   padding-top: 32px;
   display: flex;
   flex-direction: column;
@@ -20,8 +20,7 @@
   margin-bottom: 8px;
 }
 .separator {
-  border: none;
-  border-top: 3px solid #cbd5e1;
+  background: #cbd5e1;
   border-radius: 10px;
   margin-bottom: 24px;
 }
@@ -145,5 +144,11 @@
   }
   .log-out-btn {
     margin-top: 40px;
+  }
+  .separator {
+    border: 2px solid #cbd5e1;
+    border-start-end-radius: 10px;
+    margin-bottom: 24px;
+    width: 100%;
   }
 }
